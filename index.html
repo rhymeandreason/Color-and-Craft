@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Color & Craft Tutorial</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.typekit.net/tiu0pue.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="tutorial.js"></script>
+
+<style>
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: "filson-soft", sans-serif;
+  font-weight: 500;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #mobile-container, #videocontainer{
+    max-width: 500px;
+  }
+
+}
+
+body{
+  background: #D4A7FF;
+  text-align: center;
+  color: #554366;
+}
+h1 {
+  font-family: "santelia-script", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+h2{
+  font-size: 18px;
+}
+.primary-button{
+  color: white;
+  font-size: 28px;
+  padding: 12px;
+  width: 180px;
+  background: #9019FF;
+  border-radius: 8px;
+  margin: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.primary-button img{
+  margin-right: 4px;
+}
+video{
+  width: 100%;
+  display: none;
+}
+
+#mobile-container{
+  width: 100%;
+  //max-width: 600pt;
+  margin: auto auto;
+}
+#main-nav{
+  padding: 16px;
+  text-align: center;
+}
+#home-button{
+  float: left;
+}
+.hero-img{
+  width:280px;
+}
+
+ul {
+  list-style-type: none;
+}
+#playlist{
+  padding: 12px;
+  display: grid;
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-columns: auto auto;
+  margin-top: 20px;
+}
+#playlist li{
+  text-decoration: none;
+  position: relative;
+}
+#playlist a{
+  position: relative;
+  text-align: center;
+  display:inline-block;
+}
+#playlist .thumbnail{
+  width:100%;
+  border-radius: 8px;
+}
+img.number{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+img.circle-play{
+  opacity: 80%;
+  position: absolute;
+  z-index: 1;
+  width: 48px;
+  left: 36%;
+  bottom: 40%;
+}
+
+#videocontainer{
+  position: fixed;
+  top: 0px;
+  //left: 0px;
+  margin: auto auto;
+  width:100%;
+  height:100%;
+  background: #D4A7FF;
+  display: none;
+  z-index:10;
+  //max-width: 600pt;
+}
+#video1, #video2, #video3, #video4{
+  width:100%;
+}
+#close-button{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 12;
+  filter: drop-shadow(0px 1px 4px rgba(0,0,0,.2)) ;
+}
+#tutorial-nav {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background: #D4A7FF;
+  z-index: 12;
+  text-align: center;
+}
+#prev-button {
+  float: left;
+  padding: 16px;
+}
+#next-button {
+  float: right;
+  padding: 16px;
+}
+#currentIndex {
+  margin: auto auto;
+  padding: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+</style>
+
+</head>
+<body>
+<div id="mobile-container" >
+  <div id="main-nav">
+    <img id="home-button" src="icons/home.svg" />
+    <img src="logotype.svg" />
+  </div>
+  <img class="hero-img" src="CalatheaMedallion_main.png" />
+  <h1> Calathea Medallion</h2>
+    <a class="primary-button" onclick="Step1()">
+      <img src="icons/play.svg" />
+      START!
+    </a>
+  <h2>about 1 hour to make</h2>
+
+  <ul id="playlist">
+         <li class="active">
+            <a onclick="Step1()">
+              <img class="number" src="icons/number-1.svg" />
+              <img class="thumbnail" src="step1.png" />
+              <img class="circle-play" src="icons/circle-play.svg" />
+            </a>
+         </li>
+         <li>
+             <a onclick="Step2()">
+                 <img class="number" src="icons/number-2.svg" />
+                 <img class="thumbnail" src="step2.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+         <li>
+             <a onclick="Step3()">
+                 <img class="number" src="icons/number-3.svg" />
+                 <img class="thumbnail" src="step3.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+         <li>
+             <a onclick="Step4()">
+                 <img class="number" src="icons/number-4.svg" />
+                 <img class="thumbnail" src="step4.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+
+  </ul>
+
+<div id="videocontainer" >
+  <!--
+  <video id="currentvideo" controls class="iphone-video" preload="auto" poster="step1.png" tabindex="0">
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/TutorialStep1B.mp4">
+  </video>
+  -->
+  <video id="video1" class="iphone-video" preload="auto" poster="step1.png" tabindex="0" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/TutorialStep1B.mp4">
+  </video>
+  <video id="video2" class="iphone-video" preload="auto" poster="step2.png" tabindex="1" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/TutorialStep2B.mp4">
+  </video>
+  <video id="video3" class="iphone-video" preload="auto" poster="step3.png" tabindex="2" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/TutorialStep3B_1.mp4">
+  </video>
+  <video id="video4" class="iphone-video" preload="auto" poster="step4.png" tabindex="3" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/TutorialHexagon.mp4">
+  </video>
+
+
+  <a id="close-button" onclick="closeVideo()">
+    <img src="icons/x.svg" />
+  </a>
+
+  <div id="tutorial-nav">
+    <a id="prev-button" onclick="prevStep()">
+      <img src="icons/arrow-left.svg" />
+    </a>
+
+    <img id="currentIndex" src="icons/number-1.svg" />
+
+    <a id="next-button" onclick="nextStep()">
+      <img src="icons/arrow-right.svg" />
+    </a>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+
+//initTutorial();
+
+
+</script>
+
+</body>
+</html>
