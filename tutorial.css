@@ -27,6 +27,11 @@ h1 {
 h2{
   font-size: 18px;
 }
+#home-button:hover,#close-button:hover, #prev-button:hover, #next-button:hover{
+  animation-name: scaleUp;
+  animation-duration: .15s;
+  animation-fill-mode: forwards;
+}
 .primary-button{
   color: white;
   font-size: 28px;
@@ -40,6 +45,13 @@ h2{
 }
 .primary-button img{
   margin-right: 4px;
+}
+.primary-button:hover {
+  animation-name: mainButton;
+  animation-duration: .15s;
+  animation-fill-mode: forwards;
+
+  background-color: #A03AFF;
 }
 video{
   width: 100%;
@@ -86,10 +98,20 @@ ul {
   width:100%;
   border-radius: 8px;
 }
+#playlist a:hover .thumbnail{
+  filter: brightness(1.07);
+}
+#playlist a:hover img.circle-play{
+  opacity: 1;
+  animation-name: scaleUp;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+}
 img.number{
   position: absolute;
   top: 16px;
   left: 16px;
+  z-index:5;
 }
 img.circle-play{
   opacity: 80%;
@@ -148,4 +170,14 @@ img.circle-play{
 
 a {
   text-decoration: none;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(1);}
+  to { transform: scale(1.3);}
+}
+
+@keyframes mainButton {
+  from { transform: scale(1);}
+  to { transform: scale(1.05);}
 }
