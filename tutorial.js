@@ -1,3 +1,4 @@
+var totalSteps = 4;
 var currentStep = 0;
 
 $(document).ready(function() {
@@ -112,6 +113,17 @@ function Step4(){
   $('#currentIndex').attr('src', 'icons/number-4.svg');
 }
 
+function Step5(){
+  $('#video5').prop('currentTime', 0);
+  $("#video5").fadeIn("slow");
+  $("#video5").trigger('play');
+  $("#video5").addClass("currentvideo");
+  $("#videocontainer").fadeIn("slow");
+  currentStep = 5;
+  //$("#next-button").fadeOut();
+  $('#currentIndex').attr('src', 'icons/number-5.svg');
+}
+
 function prevStep(){
   $(".currentvideo").trigger('pause');
   $(".currentvideo").hide();
@@ -128,6 +140,9 @@ function prevStep(){
       break;
     case 4:
       Step3();
+      break;
+    case 5:
+      Step4();
       break;
     default:
       closeVideo();
@@ -149,8 +164,13 @@ function nextStep(){
       Step4();
       break;
     case 4:
-      closeVideo();
-      break;
+      if (totalSteps>4){
+        Step5();
+        break;
+      } else {
+        closeVideo();
+        break;
+      }
     default:
       closeVideo();
   }
