@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Color & Craft DIY Kits</title>
+  <meta name="description" content="High quality DIY kits with step-by-step video tutorials.">
+  <meta name="author" content="Color and Craft Kits by Mary Huang">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.typekit.net/tiu0pue.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="stylesheet" href="tutorial.css">
+
+<style>
+*{
+  //color: #554366;
+  line-height: 1em;
+  font-weight: 300 !important;
+}
+#main-nav{
+  background-color: #8400FF;
+  text-align: left;
+  padding: 12px;
+  display: none;
+}
+#main-nav img{
+  height: 24px;
+}
+#hero-container{
+  position: relative;
+}
+#hero-text{
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 7%;
+}
+#hero-text h1{
+  font-family: "filson-soft", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  font-size:calc(16px + 3vw);
+  margin-top: 1em;
+}
+#hero-text h2{
+  font-size:calc(12px + 1.5vw);
+  margin: .5em;
+}
+#hero-container img{
+  width: 100%;
+  min-height: 500px;
+  //max-height: 700px;
+  object-fit: cover;
+}
+@media only screen and (min-width: 992px) {
+  #main-nav{
+    display: block;
+  }
+  #hero-text{
+    bottom: 9%;
+  }
+  #hero-text h1{
+
+  }
+  #hero-text h2{
+
+  }
+  #hero-container img{
+    max-height: 1166px;
+  }
+}
+
+.section{
+  padding: 64px 0px;
+}
+.section h2{
+  font-size:calc(12px + 1vw);
+  margin: 2em;
+}
+#playlist{
+  padding: 12px;
+  display: grid;
+  column-gap: 16px;
+  row-gap: 26px;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 20px;
+}
+#playlist li{
+  text-decoration: none;
+  position: relative;
+}
+#playlist a{
+  position: relative;
+  text-align: center;
+  display:inline-block;
+  background-color: #EAD4FF;
+  border-radius: 8px;
+  height:100%;
+  padding-top: 10px;
+}
+#playlist a:hover{
+  background-color: #F6EDFF;
+}
+#playlist h3{
+  padding: 8px;
+  font-size: 18px;
+}
+#playlist .thumbnail{
+  width:90%;
+  border-radius: 8px;
+}
+.level{
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.coming-soon {
+  opacity: .5;
+}
+body{
+  padding-bottom: 100px;
+}
+</style>
+
+</head>
+<body>
+<div id="landing">
+  <div id="main-nav">
+    <img src="logotype.svg" />
+  </div>
+
+<div id="hero-container">
+  <img src="Hero-BG.jpg" />
+  <div id="hero-text">
+    <h2> High quality materials</h2>
+    <h2> Step-by-step video tutorials.</h2>
+    <h1> Launching Soon</h1>
+  </div>
+</div>
+
+  <div class="section">
+  <h2>Kits come with everything you need. <br> No glue or scissors required!</h2>
+
+  <ul id="playlist">
+     <li >
+        <a href="Medallion.html">
+          <img class="thumbnail" src="plants/CalatheaMedallion_main.png" />
+          <h3>Medallion Calathea</h3>
+          <p class="level">Beginner</p>
+        </a>
+     </li>
+     <li >
+        <a href="LemonLime.html">
+          <img class="thumbnail" src="plants/LemonLime_main.png" />
+          <h3>Lemon-Lime Calathea</h3>
+          <p class="level">Beginner</p>
+        </a>
+     </li>
+     <li >
+        <a href="Maranta.html">
+          <img class="thumbnail" src="plants/Maranta_main.png" />
+          <h3>Maranta Calathea</h3>
+          <p class="level">Intermediate</p>
+        </a>
+     </li>
+
+     <li class="coming-soon">
+        <a >
+          <img class="thumbnail" src="plants/Peacock_main.png" />
+          <h3>coming soon!</h3>
+        </a>
+     </li>
+     <li class="coming-soon">
+        <a >
+          <img class="thumbnail" src="plants/Pinstripe_main.png" />
+          <h3>coming soon!</h3>
+        </a>
+     </li>
+     <li class="coming-soon">
+        <a >
+          <img class="thumbnail" src="plants/Alocosia_main.png" />
+          <h3>coming soon!</h3>
+        </a>
+     </li>
+     <li class="coming-soon">
+        <a >
+          <img class="thumbnail" src="plants/Begonia_main.png" />
+          <h3>coming soon!</h3>
+        </a>
+     </li>
+     <li class="coming-soon">
+        <a >
+          <img class="thumbnail" src="plants/CandyStripe_main.png" />
+          <h3>coming soon!</h3>
+        </a>
+     </li>
+     <li class="coming-soon">
+        <a >
+          <img class="thumbnail" src="plants/Hearts_main.png" />
+          <h3>coming soon!</h3>
+        </a>
+     </li>
+     <li class="coming-soon">
+        <a >
+          <img class="thumbnail" src="plants/Fishbone_main.png" />
+          <h3>coming soon!</h3>
+        </a>
+     </li>
+
+  </ul>
+  </div>
+
+</div>
+
+
+</body>
+</html>
