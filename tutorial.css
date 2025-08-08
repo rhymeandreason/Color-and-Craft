@@ -39,10 +39,11 @@ h2{
   width: 180px;
   background: #9019FF;
   border-radius: 8px;
-  margin: 20px;
+  margin: 30px;
   display: inline-block;
   cursor: pointer;
   letter-spacing: 1px;
+  margin-bottom:30px;
 }
 .primary-button img{
   margin-right: 4px;
