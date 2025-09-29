@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   font-family: "filson-soft", sans-serif;
-  font-weight: 500;
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -17,6 +17,7 @@ body{
   background: #D4A7FF;
   text-align: center;
   color: #554366;
+  font-weight: 500;
 }
 h1 {
   font-family: "santelia-script", sans-serif;
@@ -172,11 +173,12 @@ img.circle-play{
 
 .help{
   margin: 20px;
+  font-weight: 300;
+  line-height: 1.4em;
 }
 
 a {
   text-decoration: none;
-  font-weight: 300;
 }
 
 @keyframes scaleUp {
