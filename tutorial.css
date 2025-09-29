@@ -170,8 +170,13 @@ img.circle-play{
   padding: 16px;
 }
 
+.help{
+  margin: 20px;
+}
+
 a {
   text-decoration: none;
+  font-weight: 300;
 }
 
 @keyframes scaleUp {
