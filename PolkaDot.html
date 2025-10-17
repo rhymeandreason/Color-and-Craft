@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Color & Craft Tutorial</title>
+  <meta name="description" content="Video tutorial for the Pink Variegated Polka Dot Begonia paper plant kit.">
+  <meta name="author" content="Color and Craft Kits by Mary Huang">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.typekit.net/tiu0pue.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="tutorial.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="stylesheet" href="tutorial.css">
+
+<style>
+
+
+</style>
+
+</head>
+<body>
+<div id="mobile-container" >
+  <div id="main-nav">
+    <a href="index.html"><img id="home-button" src="icons/home.svg" /></a>
+    <img src="logotype.svg" />
+  </div>
+  <img class="hero-img" src="plants/PolkaDot_main.png" />
+  <h1>Pink Variegated <br>Polka Dot Begonia</h2>
+    <a class="primary-button" onclick="Step1()">
+      <img src="icons/play.svg" />
+      START!
+    </a>
+  <h2>about 1 hour to make</h2>
+
+  <ul id="playlist">
+         <li class="active">
+            <a onclick="Step1()">
+              <img class="number" src="icons/number-1.svg" />
+              <img class="thumbnail" src="VB/step1.png" />
+              <img class="circle-play" src="icons/circle-play.svg" />
+            </a>
+         </li>
+         <li>
+             <a onclick="Step2()">
+                 <img class="number" src="icons/number-2.svg" />
+                 <img class="thumbnail" src="VB/step2.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+         <li>
+             <a onclick="Step3()">
+                 <img class="number" src="icons/number-3.svg" />
+                 <img class="thumbnail" src="VB/step3.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+         <li>
+             <a onclick="Step4()">
+                 <img class="number" src="icons/number-4.svg" />
+                 <img class="thumbnail" src="VB/step4.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+         <li>
+             <a onclick="Step5()">
+                 <img class="number" src="icons/number-5.svg" />
+                 <img class="thumbnail" src="VB/step5.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+         <li>
+             <a onclick="Step6()">
+                 <img class="number" src="icons/number-6.svg" />
+                 <img class="thumbnail" src="step_hexagon.png" />
+                 <img class="circle-play" src="icons/circle-play.svg" />
+             </a>
+         </li>
+
+  </ul>
+  <div class="help">
+    Thank you for being an early tester! If you have any issues with your kit, please email me and I'll make it right.
+    <br> <br>
+    hello (at) colorandcraft.co
+  </div>
+
+<div id="videocontainer" >
+  <video id="video1" class="iphone-video" preload="auto" poster="VB/step1.png" tabindex="0" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/PolkaDot/VB_Tutorial1.mp4">
+  </video>
+  <video id="video2" class="iphone-video" preload="auto" poster="VB/step2.png" tabindex="1" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/PolkaDot/VB_Tutorial2.mp4">
+  </video>
+  <video id="video3" class="iphone-video" preload="auto" poster="VB/step3.png" tabindex="2" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/PolkaDot/VB_Tutorial3.mp4">
+  </video>
+  <video id="video4" class="iphone-video" preload="auto" poster="VB/step4.png" tabindex="3" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/PolkaDot/VB_Tutorial4.mp4">
+  </video>
+  <video id="video5" class="iphone-video" preload="auto" poster="VB/step4.png" tabindex="4" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/PolkaDot/VB_Tutorial5.mp4">
+  </video>
+  <video id="video6" class="iphone-video" preload="auto" poster="step_hexagon.png" tabindex="5" webkit-playsinline playsinline>
+   <source src="https://storage.googleapis.com/crafting-tutorial-videos/PolkaDot/VB_Hexagon.mp4">
+  </video>
+
+
+  <a id="close-button" onclick="closeVideo()">
+    <img src="icons/x.svg" />
+  </a>
+
+  <div id="tutorial-nav">
+    <a id="prev-button" onclick="prevStep()">
+      <img src="icons/arrow-left.svg" />
+    </a>
+
+    <img id="currentIndex" src="icons/number-1.svg" />
+
+    <a id="next-button" onclick="nextStep()">
+      <img src="icons/arrow-right.svg" />
+    </a>
+  </div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>

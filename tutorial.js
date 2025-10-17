@@ -124,6 +124,17 @@ function Step5(){
   $('#currentIndex').attr('src', 'icons/number-5.svg');
 }
 
+function Step6(){
+  $('#video6').prop('currentTime', 0);
+  $("#video6").fadeIn("slow");
+  $("#video6").trigger('play');
+  $("#video6").addClass("currentvideo");
+  $("#videocontainer").fadeIn("slow");
+  currentStep = 6;
+  //$("#next-button").fadeOut();
+  $('#currentIndex').attr('src', 'icons/number-6.svg');
+}
+
 function prevStep(){
   $(".currentvideo").trigger('pause');
   $(".currentvideo").hide();
@@ -143,6 +154,9 @@ function prevStep(){
       break;
     case 5:
       Step4();
+      break;
+    case 6:
+      Step5();
       break;
     default:
       closeVideo();
@@ -171,6 +185,14 @@ function nextStep(){
         closeVideo();
         break;
       }
+    case 5:
+    if (totalSteps>5){
+      Step6();
+      break;
+    } else {
+      closeVideo();
+      break;
+    }
     default:
       closeVideo();
   }
